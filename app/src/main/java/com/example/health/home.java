@@ -1,4 +1,4 @@
-0package com.example.health;
+package com.example.health;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -8,23 +8,21 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
-import com.example.health.MainActivity;
 import com.example.health.R;
 import com.example.health.login;
 
-public class home extends AppCompatActivity implements View.OnClickListener{
+public class home extends AppCompatActivity  {
 Button homeS,homeR;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)  {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
 
         homeS=findViewById(R.id.homeS);
         homeR=findViewById(R.id.homeR );
-homeS.setOnClickListener(this);
-        homeR.setOnClickListener(this);
+
 
         homeS.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -35,11 +33,10 @@ homeS.setOnClickListener(this);
 
     }
 
-    @Override 
-    public void onClick(View v) {
-        //Toast.makeText(getApplicationCo ntext(), "On click mi perro", Toast.LENGTH_SHORT).show();
-        Intent i=new Intent(home.this, login.class);
+    public void homeS(View v) {
+        Intent i=new Intent(this, login.class);
         startActivity(i);
+
+
     }
 }
-0
